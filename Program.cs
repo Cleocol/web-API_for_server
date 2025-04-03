@@ -11,6 +11,12 @@ builder.WebHost.UseUrls("http://*:80");
 
 var app = builder.Build();
 
+// if (app.Environment.IsDevelopment())
+//{
+app.UseSwagger();
+app.UseSwaggerUI();
+//}
+
 app.UseHttpsRedirection();
 
 app.UseAuthorization();
